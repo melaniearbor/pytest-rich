@@ -9,13 +9,9 @@ build-backend = "setuptools.build_meta"
 name = "pytest-rich"
 authors = [
     { name = "Bruno Oliveira", email = "nicoddemus@gmail.com"},
-    { name = "Melanie Arbor", email = "marbor@oreilly.com" },
-    { name = "klove", email = "klove@oreilly.com"}
 ]
 maintainers = [
     { name = "Bruno Oliveira", email = "nicoddemus@gmail.com"},
-    { name = "Melanie Arbor", email = "marbor@oreilly.com" },
-    { name = "klove", email = "klove@oreilly.com"}
 ]
 version = "0.1.0"
 description = "Leverage `rich` for richer pytest session output."
