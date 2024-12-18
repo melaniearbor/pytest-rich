@@ -52,6 +52,7 @@ dev = [
     "reorder-python-imports",
     "tox",
     "types-attrs",
+    "coverage",
 ]
 
 [project.urls]
@@ -72,4 +73,10 @@ pytester_example_dir = "tests/example"
 pythonpath = ["pytest_examples", "src", "tests"]
 testpaths = [
   "tests",
+]
+
+[tool.coverage.run]
+omit = [
+    "/private/var/folders/**/*",
+    "/private/var/folders/*/*/*"
 ]
