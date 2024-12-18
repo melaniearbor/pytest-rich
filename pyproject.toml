@@ -11,7 +11,7 @@ authors = [
     { name = "Bruno Oliveira", email = "nicoddemus@gmail.com"},
 ]
 maintainers = [
-    { name = "Bruno Oliveira", email = "nicoddemus@gmail.com"},
+    { name = "Melanie Arbor", email = "marbor@oreilly.com"},
 ]
 version = "0.1.0"
 description = "Leverage `rich` for richer pytest session output."
@@ -22,6 +22,7 @@ dependencies = [
     "pytest>=7.0.0",
     "rich",
     "typing-extensions",
+    "attrs",
 ]
 
 classifiers = [
@@ -54,9 +55,9 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/nicoddemus/pytest-rich"
+Repository = "https://github.com/melaniearbor/pytest-rich"
 
-[entrypoints."pytest11"]
+[project.entry-points."pytest11"]
 rich = "pytest_rich.plugin"
 
 [tool.setuptools_scm]
@@ -68,6 +69,7 @@ force_single_line = "true"
 [tool.pytest.ini_options]
 addopts = "--ignore tests/example"
 pytester_example_dir = "tests/example"
+pythonpath = ["pytest_examples", "src", "tests"]
 testpaths = [
   "tests",
 ]

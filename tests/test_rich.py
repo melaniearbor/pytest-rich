@@ -1,4 +1,8 @@
+conftest = """pytest_plugins = ("pytest_rich",)"""
+
+
 def test_outcomes(pytester):
+    pytester.makeconftest(conftest)
     pytester.copy_example("test_basic.py")
 
     outcomes = {
@@ -17,6 +21,7 @@ def test_outcomes(pytester):
 
 
 def test_collect_error(pytester):
+    pytester.makeconftest(conftest)
     pytester.makepyfile(
         """
     raise Exception("collect error")
