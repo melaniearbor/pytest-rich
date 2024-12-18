@@ -50,9 +50,9 @@ dev = [
     "freezegun",
     "mypy",
     "reorder-python-imports",
+    "pytest-cov",
     "tox",
     "types-attrs",
-    "coverage",
 ]
 
 [project.urls]
