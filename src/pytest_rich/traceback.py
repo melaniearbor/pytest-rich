@@ -2,7 +2,7 @@ import ast
 from collections.abc import Sequence
 from typing import Optional
 
-import attr
+import attrs
 from _pytest._code.code import ExceptionChainRepr
 from _pytest._code.code import ReprEntry
 from _pytest._code.code import ReprFileLocation
@@ -32,7 +32,7 @@ from rich.theme import Theme
 from rich.traceback import PathHighlighter
 
 
-@attr.s(auto_attribs=True)
+@attrs.define(auto_attribs=True)
 class RichExceptionChainRepr:
     """
     A rich representation of an ExceptionChainRepr produced by pytest.
